@@ -77,6 +77,9 @@ Aide-le en créant le Modèle Conceptuel de Données (MCD) pour les fonctionnali
 
 Enregistre une image de ta modélisation dans ce dépôt avec Git.
 
+Reponse juste ici :
+<img src="./client/src/assets/mcd.png">
+
 ## Jouer avec les tests
 
 La partie backend contient des tests pour chaque étape du checkpoint.
