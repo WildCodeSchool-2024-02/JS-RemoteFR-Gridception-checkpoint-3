@@ -18,6 +18,10 @@ const tilesRouter = require("./tiles/router");
 
 router.use("/tiles", tilesRouter);
 
+const tileExists = require("../../services/tileExists");
+
+router.put("/:id", tileExists);
+
 /* ************************************************************************* */
 
 module.exports = router;
