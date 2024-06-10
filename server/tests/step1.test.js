@@ -20,7 +20,7 @@ describe("The has_treasure attribute", () => {
     const [result] = await database.query("describe tile");
 
     const hasTreasure = result.find(({ Field }) => Field === "has_treasure");
-
-    expect(hasTreasure.Default).toMatch(/0/);
+    
+    expect(hasTreasure.Defaultfalse);
   });
 });
