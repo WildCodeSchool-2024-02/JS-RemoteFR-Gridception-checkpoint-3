@@ -13,6 +13,23 @@ const browse = async (req, res, next) => {
   }
 };
 
+const edit = async (req, res, next) => {
+  // Extract the category data from the request body and params
+  const boats = { ...req.body, id: req.params.id };
+
+  try {
+
+    await tables.boat.update(boats);
+
+    // Respond with HTTP 204 (No Content)
+    res.sendStatus(204);
+  } catch (err) {
+    // Pass any errors to the error-handling middleware
+    next(err);
+  }
+};
+
 module.exports = {
   browse,
+  edit,
 };
