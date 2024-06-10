@@ -135,4 +135,4 @@ Et ouvre l'adresse http://localhost:3000/ (n'oublie pas : c'est une version alph
 
 ## Mon MCD: 
 
-![Logo](./client/src/assets/mcdcheckpoint3.png)
+<img src="./client/src/assets/mcdcheckpoint3.PNG">
