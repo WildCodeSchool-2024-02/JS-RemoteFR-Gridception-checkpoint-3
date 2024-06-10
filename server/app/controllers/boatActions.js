@@ -1,4 +1,5 @@
 const tables = require("../../database/tables");
+const BoatRepository = require("../../database/models/BoatRepository");
 
 const browse = async (req, res, next) => {
   try {
@@ -13,6 +14,27 @@ const browse = async (req, res, next) => {
   }
 };
 
+const edit = async (req, res, next) => {
+  try {
+    const { id } = req.params.id;
+
+    const { coordX, coordY } = req.body;
+
+    const boatRepository = new BoatRepository();
+
+    const affectedRows = await boatRepository.update({ id, coordX, coordY });
+
+    if (affectedRows > 0) {
+      res.json({ message: "Boat updated successfully" });
+    } else {
+      res.status(404).json({ message: "Boat not found" });
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   browse,
+  edit,
 };
