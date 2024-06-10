@@ -132,3 +132,7 @@ npm run dev
 ```
 
 Et ouvre l'adresse http://localhost:3000/ (n'oublie pas : c'est une version alpha 😅).
+
+## Mon MCD: 
+
+![Logo](./client/src/assets/mcdcheckpoint3.png)
