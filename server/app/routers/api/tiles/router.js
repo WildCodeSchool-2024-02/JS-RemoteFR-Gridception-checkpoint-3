@@ -10,6 +10,7 @@ const { browse } = require("../../../controllers/tileActions");
 
 router.get("/", browse);
 
+router.put("/:id");
 /* ************************************************************************* */
 
 module.exports = router;
