@@ -10,7 +10,9 @@ const { browse, edit } = require("../../../controllers/boatActions");
 
 router.get("/", browse);
 
-router.put("/:id", edit);
+const tileExists = require("../../../services/tileExists");
+
+router.put("/:id", tileExists, edit);
 
 /* ************************************************************************* */
 
