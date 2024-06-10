@@ -9,6 +9,9 @@ const router = express.Router();
 const { browse } = require("../../../controllers/boatActions");
 
 router.get("/", browse);
+const { update} = require("../../../controllers/boatActions")
+
+router.put("/:id", update);
 
 /* ************************************************************************* */
 

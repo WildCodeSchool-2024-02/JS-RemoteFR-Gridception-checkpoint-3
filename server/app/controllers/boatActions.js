@@ -12,7 +12,19 @@ const browse = async (req, res, next) => {
     next(err);
   }
 };
+const update = async (req, res, next) => {
+  try{
+  const boatId = await tables.boat.update(req.params.id);
+  
+  res.json(boatId);
+}
+  catch (error) {
+    next(error)
+
+  }
+  
+};
 
 module.exports = {
-  browse,
+  browse,update
 };
