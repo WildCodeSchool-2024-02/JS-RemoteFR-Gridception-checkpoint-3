@@ -14,10 +14,10 @@ const browse = async (req, res, next) => {
 };
 
 const edit = async (req, res, next) => {
-  const boat = { ...req.body, id: req.params.id };
+  const boats = { ...req.body, id: req.params.id };
 
   try {
-    await tables.boat.update(boat);
+    await tables.boat.update(boats);
 
     res.sendStatus(204);
   } catch (err) {
